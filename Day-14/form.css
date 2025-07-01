@@ -1,0 +1,57 @@
+/* body{
+    background-color: white;
+    padding: 100px;
+    margin: auto;
+}
+.f{
+    width: 400px;
+    margin: auto;
+    padding: 50px;
+}
+.f input{
+    border-collapse: collapse;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.f input[type="button"]{
+    border: 1px solid blue;
+    border-radius: 20px;
+    width: 30%;
+} */
+body{
+    background-color: mediumblue;
+}
+.f{
+    width: 400px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 50px 0px;
+    border-radius: 10px;
+}
+.f h1{
+    text-align: center;
+}
+.f form{
+    padding: 20px;
+}
+.f form input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0px;
+}
+.f form input[type="button"]{
+    border: 1px solid blue;
+    border-radius: 20px;
+    width: 100%;
+    background-color: blue;
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
