@@ -1,0 +1,29 @@
+body{
+    background-image: url("profile.jpeg");
+    background-repeat: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    color:white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border:1px solid black;
+}
+p{
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.para1{
+    border: 1px dotted black;
+}
+.para2{
+    border: 1px dashed black;
+}
+.para3{
+    border: 1px groove black;
+}
+.para1, .para2, .para3{
+    border-radius: 20px
+}
