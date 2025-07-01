@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.menu {
+    width: 100%; /* Full width for horizontal menu */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex; /* Make main menu horizontal */
+    background-color: orangered; /* Add a background color to the full menu bar if needed */
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #fff;
+    color: orangered;
+}
+
+.menu ul li .active {
+    background-color: #fff;
+    color: orangered;
+}
+
+/* SUBMENU STYLE */
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    flex-direction: column; /* Submenu items stack vertically */
+    background-color: #fff;
+    z-index: 1;
+}
+
+.menu ul li:hover ul {
+    display: flex;
+}
+
+.menu ul li ul li {
+    margin: 0;
+}
+
+.menu ul li ul li a {
+    background-color: #fff;
+    color: orangered;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.menu ul li ul li a:hover {
+    background-color: orangered;
+    color: #fff;
+}
