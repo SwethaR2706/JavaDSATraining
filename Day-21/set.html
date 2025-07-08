@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to .......</title>
+    </head>
+    <body>
+        <h1>Welcome to /////</h1>
+        <a href="https://www.mallareddyuniversity.ac.in/">Malla Reddy University</a><br>
+        <button onclick="setAttr()">set</button>
+        <p id="demo"></p>
+        <script>
+            function setAttr()
+            {
+                var x=document.getElementsByTagName("a")[0].setAttribute("href","https://www.w3schools.com/")
+                document.getElementById("demo").innerHTML=x;
+            }
+        </script>
+    </body>
+</html>
