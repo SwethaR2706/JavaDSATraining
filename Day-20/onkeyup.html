@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Hide Show</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false" ondragstart="return false" style="height: 100vh">
+    <h1>Welcome to ......</h1>
+
+    Enter full amount: <input type="text" name="fa" id="fa" onkeyup="calc()"><br>
+    Enter paid amount: <input type="text" name="pa" id="pa" onkeyup="calc()"><br>
+    Enter due amount: <input type="text" name="da" id="da" readonly><br>
+
+    <span id="emsg"></span>
+
+    <script>
+        function calc() {
+            var x = Number(document.getElementById("fa").value);
+            var y = Number(document.getElementById("pa").value);
+            var z = document.getElementById("da");
+
+            var due = x - y;
+            z.value = due;
+
+            if (due < 0) {
+                document.getElementById("emsg").innerHTML = "Invalid details";
+            } else {
+                document.getElementById("emsg").innerHTML = "";
+            }
+        }
+        onkeydown=function(event)
+        {
+            event=event||window.event;
+            if((event.keyCode==123||event.keyCode==17))
+            {
+                //alert('f12 key disabled');
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
