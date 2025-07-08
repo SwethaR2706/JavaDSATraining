@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    
+    <button onclick="bonFun()">Click me</button>
+    <button onclick="setTimeout(bonFun, 2000)">Set Timeout</button>
+    <button onclick="mytime = setInterval(bonFun, 2000)">Set Interval</button>
+    <button onclick="clearInterval(mytime)">Stop</button>
+
+    <script>
+        let mytime;
+        function bonFun() {
+            alert("Welcome to the page");
+        }
+    </script>
+</body>
+</html>
