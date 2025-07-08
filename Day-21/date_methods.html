@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>date methods</title>
+    </head>
+    <body>
+        <h1>Welcome to .....</h1>
+        <button onclick="dateMethods()">click</button>
+        <button onclick="setInterval(myTime,108)">time</button>
+        <p id="demo"></p>
+        <script>
+            function dateMethods()
+            {
+                var today=new Date();
+                document.getElementById("demo").innerHTML=today;
+                //document.getElementById("demo").innerHTML=today.getFullYear();
+                //document.getElementById("demo").innerHTML=today.getMonth();
+                //document.getElementById("demo").innerHTML=today.getDate();
+                //document.getElementById("demo").innerHTML=today.setDate();
+            }
+            function myTime()
+            {
+                var today=new Date();
+                document.getElementById("demo").innerHTML=today.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html>
