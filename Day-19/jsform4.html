@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even Odd form</title>
+    </head>
+    <body>
+        <form>
+            a value is: <input type="text" id="numberA" name="numberA"><br>
+            b value is: <input type="text" id="numberB" name="numberB"><br>
+            c value is: <input type="text" id="numberC" name="numberC"><br>
+        <input type="submit" value="print greatest no" onclick="checkGreater(event)">
+        </form>
+        <div id="result"></div>
+        <script>
+            function checkGreater(event) {
+                event.preventDefault();
+                var a = Number(document.getElementById("numberA").value);
+                var b = Number(document.getElementById("numberB").value);
+                var c = Number(document.getElementById("numberC").value);
+                if (a > b && a > c) {
+                    document.getElementById("result").innerText = "a is greater";
+                } else if(b > a && b > c){
+                    document.getElementById("result").innerText = "b is greater";
+                } else if (c > a && c > b) {
+                    document.getElementById("result").innerText = "c is greatest";
+                } else {
+                    document.getElementById("result").innerText = "There is a tie or equal values";
+                }
+            }
+        </script>
+    </body>
+</html>
