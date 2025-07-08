@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <button onclick="bomfun()">Click</button>
+    <p id="res"></p>
+
+    <script>
+        function bomfun() {
+            document.getElementById("res").innerHTML = navigator.appName;
+            // You can uncomment the lines below to display other browser info
+            document.getElementById("res").innerHTML = navigator.appCodeName;
+            document.getElementById("res").innerHTML = navigator.platform;
+        }
+    </script>
+</body>
+</html>
