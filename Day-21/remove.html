@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to ......</title>
+        <style>
+            .heading
+            {
+                background-color: orangered;
+                color: #fff;
+                padding: 30px;
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="heading">Welcome to /////</h2>
+        <button onclick="setAttr()">remove</button>
+        <p id="demo"></p>
+        <script>
+            function setAttr()
+            {
+                var x=document.getElementsByTagName("h2")[0].removeAttribute("class","heading")
+            }
+        </script>
+    </body>
+</html>
