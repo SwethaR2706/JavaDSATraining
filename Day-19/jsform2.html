@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even Odd form</title>
+    </head>
+    <body>
+        <form>
+            Enter any number: <input type="text" id="number" name="number"><br>
+        <p id="result">(-50,>50&&<100,>100)</p>
+        <input type="submit" value="result" onclick="checkPosition(event)">
+        </form>
+        <script>
+            function checkPosition(event) {
+            event.preventDefault();
+            var x = Number(document.getElementById("number").value);
+            if (x <50) {
+                document.getElementById("result").innerText = "<50";
+            }
+            else if (x >50 && x<100) {
+                document.getElementById("result").innerText = "between 50 and 100";
+            }
+            else if(x>100){
+                document.getElementById("result").innerText = ">100";
+            }
+        }
+        </script>
+    </body>
+</html>
