@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Names</title>
+</head>
+<body>
+    <h2>Names:</h2>
+    <p id="name"></p>
+    <button onclick="showNames()">Start</button>
+
+    <script>
+        var names = ["Sai Keerthi", "sushmitha", "nikki", "swetha"];
+        var i = 0;
+        var timer;
+
+        function showNames() {
+            i = 0;
+            timer = setInterval(function() {
+                if (i < names.length) {
+                    document.getElementById("name").innerText = names[i];
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
