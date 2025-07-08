@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body style="border: 1px solid black; padding: 20px; width: 300px;">
+    <form action="" method="post" onsubmit="return valid()">
+        <label for="uname">User Name:</label>
+        <input type="text" name="uname" id="uname">
+        <span id="userError" style="color: red;"></span><br><br>
+
+        <label for="email">Email Id</label>
+        <input type="email" name="email" id="email">
+        <span id="emailError" style="color: red;"></span><br><br>
+
+        Gender: 
+        <input type="radio" name="gender" id="male" onchange="msgHide()">Male
+        <input type="radio" name="gender" id="female" onchange="msgHide()">Female
+        <br>
+        <span id="emsg" style="color: red;"></span><br><br>
+
+        <label for="phoneno">Phone:</label>
+        <input type="tel" name="phoneno" id="phoneno">
+        <span id="phoneError" style="color: red;"></span><br><br>
+
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd">
+        <span id="passError" style="color: red;"></span><br><br>
+
+        <label for="rpwd">Re-enter Password:</label>
+        <input type="password" name="rpwd" id="rpwd">
+        <span id="repassError" style="color: red;"></span><br><br>
+
+        <center><input type="submit" value="Submit" id="submit"><br></center>
+    </form>
+
+    <script>
+        function valid() {
+            var user = document.getElementById("uname").value;
+            var x = document.getElementById("male").checked;
+            var y = document.getElementById("female").checked;
+            var pass = document.getElementById("pwd").value;
+            var rpass = document.getElementById("rpwd").value;
+
+            document.getElementById("userError").innerHTML = "";
+            document.getElementById("emsg").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+            document.getElementById("repassError").innerHTML = "";
+
+            if (user.length < 6 || user.length > 15) {
+                document.getElementById("userError").innerHTML = "Username must be 6-15 characters.";
+                return false;
+            }
+
+            if (x) {
+                alert("You selected Male");
+            } else if (y) {
+                alert("You selected Female");
+            } else {
+                document.getElementById("emsg").innerHTML = "Please select a gender!";
+                return false;
+            }
+
+            if (pass.length < 6 || pass.length > 15) {
+                document.getElementById("passError").innerHTML = "Password must be 6-15 characters.";
+                return false;
+            } 
+            if (pass !== rpass) {
+                document.getElementById("repassError").innerHTML = "Passwords do not match.";
+                return false;
+            }
+
+            return true;
+        }
+
+        function msgHide() {
+            document.getElementById("emsg").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
