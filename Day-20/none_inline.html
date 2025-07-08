@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hide/Show</title>
+    </head>
+    <body>
+        <h1 id="heading" style="display: inline;">Welcome to .......</h1>
+        <br>
+        <button id="btn" onclick="onDisplay()">Hide</button>
+        <script>
+            function onDisplay()
+            {
+                var x=document.getElementById("heading");
+                if(x.style.display=='inline')
+                {
+                    x.style.display='none';
+                    document.getElementById("btn").innerHTML="Show";
+                }
+                else{
+                    x.style.display='inline';
+                    document.getElementById("btn").innerHTML="Hide";
+
+                }
+            }
+        </script>
+    </body>
+</html>
