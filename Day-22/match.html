@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match</title>
+    </head>
+    <body>
+        <img id="bimg" src="resources/images/off.jpg" width="300px" height="300px"><br>
+        <button onclick="valid()">ON/OFF</button>
+        <script>
+            function valid()
+            {
+                var img=document.getElementById("bimg");
+                if(img.src.match('resources/images/off.jpg'))
+                {
+                    img.src="resources/images/on.jpg";
+                    document.getElementById("btn").innerHTML="OFF";
+                }
+                else
+                {
+                    img.src="resources/images/off.jpg";
+                    document.getElementById("btn").innerHTML="ON";
+                }
+            }
+        </script>
+    </body>
+</html>
