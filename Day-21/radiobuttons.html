@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio</title>
+        <style>
+            span{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post">
+            <input type="radio" name="gender" id="male" onchange="msgHide()">Male<br>
+            <input type="radio" name="gender" id="female" onchange="msgHide()">Female<br>
+            <input type="submit" onclick="return valid()"><br>
+            <span id="emsg"></span>
+        </form>
+        <script>
+            function valid()
+            {
+                var x=document.getElementById("male").checked;
+                var y=document.getElementById("female").checked;
+                if(x==true)
+                {
+                    alert("You are selected male");
+                }
+                else if(y==true)
+                {
+                    alert("You are selected female");
+                }
+                else{
+                    document.getElementById("emsg").innerHTML="Please select any one!";
+                    return false;
+                }
+            }
+            function msgHide()
+            {
+                document.getElementById("emsg").innerHTML="";
+                x.style.display="inline";
+            }
+        </script>
+    </body>
+</html>
