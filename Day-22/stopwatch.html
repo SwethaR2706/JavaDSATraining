@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch</title>
+</head>
+<body>
+
+  <h2 id="display">00:00:00.00</h2>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+
+  <script>
+    var hr = 0;
+    var min = 0;
+    var sec = 0;
+    var ms = 0;
+    var timer = null;
+
+    function updateDisplay() {
+      var h = hr < 10 ? "0" + hr : hr;
+      var m = min < 10 ? "0" + min : min;
+      var s = sec < 10 ? "0" + sec : sec;
+      var milli = ms < 10 ? "0" + ms : ms;
+      document.getElementById("display").innerText = h + ":" + m + ":" + s + "." + milli;
+    }
+
+    function startTimer() {
+      if (timer === null) {
+        timer = setInterval(function () {
+          ms++;
+          if (ms === 100) {
+            ms = 0;
+            sec++; 
+            if (sec === 60) {
+              sec = 0;
+              min++;
+              if (min === 60) {
+                min = 0;
+                hr++;
+              }
+            }
+          }
+          updateDisplay();
+        }, 10);
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timer);
+      timer = null;
+    }
+  </script>
+</body>
+</html>
