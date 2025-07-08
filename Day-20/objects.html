@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            //creating object
+            let student = { name: "swetha", age: 17, course: "AIML", admno: 143, contact: 1234098765 };
+
+            //printing
+            console.log(student.name);
+            console.log(student.age);
+            console.log(student.course);
+
+            //modifying object
+            student.admno=123;
+            console.log(student);
+            student['contact']='1234567890'
+            console.log(student)
+            student.name='siri';
+            console.log(student)
+            student['name']='sri'
+            console.log(student)
+
+            //deleting object
+            delete student.contact;
+            delete student.admno;
+            console.log(student)
+
+            //only to print keys alone
+            console.log(Object.keys(student));
+
+            //only to print values alone
+            console.log(Object.values(student));
+
+            //only to print entries alone
+            console.log(Object.entries(student));
+
+            //object with function
+        let car={name: 'bmw', color:'red', model:'x5',
+                start: function(){
+                    return "my Vehicle is started";
+                }};
+                console.log(car.name);
+                console.log(car.color);
+                console.log(car.model);
+                console.log(car.start());
+
+            let student1 = { name: "swetha", age: 17, course: "AIML", admno: 143, contact: 1234098765,
+        address: {dist:'bvrm', pin: 534502}};
+        console.log(student)
+        console.log(student1.address.dist)
+
+        //creating object using 'new' keyword
+let obj=new Object();
+obj.a=10;
+obj.b=30;
+obj.sum=function()
+{
+    return obj.a+obj.b;
+}
+console.log(obj.a);
+console.log(obj.b);
+console.log(obj.sum());
+        </script>
+    </body>
+</html>
