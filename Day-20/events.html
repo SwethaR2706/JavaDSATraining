@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+    </head>
+    <body onload="myfun()">
+        <h1 onmouseenter="myfun()">Welcome to .......</h1>
+        <!-- <button onclick="myfun()">Click</button> -->
+         <!-- Enter your name: <input type="text" name="fname" id="txt" onkeyup="onKeyFun()"> -->
+          Enter email:<input type="email" name="email" id="email" onblur="onBlurFun()">
+         <h2 id="demo"></h2>
+
+        <script>
+            /*function myfun()
+            {
+                alert("Hello guys!");
+            }
+            function onKeyFun()
+            {
+                var x=document.getElementById("txt");
+                document.getElementById("demo").innerHTML=x.value;
+            }*/
+            function onBlurFun()
+            {
+                var x=document.getElementById("email");
+                x.value=x.value.toUpperCase();
+            }
+        </script>
+    </body>
+</html>
