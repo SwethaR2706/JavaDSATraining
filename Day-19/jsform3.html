@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <form onsubmit="showTable(event)">
+        Enter any number:
+        <input type="text" id="number" name="number"><br><br>
+        <p id="result">
+            (5*1=5).........
+        </p><br>
+        <input type="submit" value="result" style="border: 2px solid black;">
+    </form>
+
+    <script>
+        function showTable(event) {
+            event.preventDefault();
+            var num = Number(document.getElementById("number").value);
+            var result = "";
+
+            for (var i = 1; i <= 10; i++) {
+                result += num + " * " + i + " = " + (num * i) + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
