@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js</title>
+    </head>
+    <body>
+        <h1>Welcome to ....</h1>
+        <!-- <button onclick="bomFun()">Open</button> -->
+        <button onclick="bomFun()">Click</button>
+        <button onclick="bomFun2()">Assign</button>
+        <!-- <button onclick="bomFun2()">Close</button> -->
+         <p id="result"></p>
+        <script>
+            var mywin;
+            function bomFun()
+            {
+                //window methods
+                /*mywin=window.open("https://www.w3schools.com/","width=500px","height=300px");
+                mywin.moveTo(300,200);*/
+                //screen methods
+                //document.getElementById("result").innerHTML=window.screen.height;
+                //document.getElementById("result").innerHTML=window.screen.width;
+                //document.getElementById("result").innerHTML=window.screen.availHeight;
+                //document.getElementById("result").innerHTML=window.screen.availWidth;
+                //document.getElementById("result").innerHTML=window.screen.colorDepth;
+                //document.getElementById("result").innerHTML=window.screen.pixelDepth;
+                //location methods
+                document.getElementById("result").innerHTML=window.location.href;
+                document.getElementById("result").innerHTML=window.location.host;
+                document.getElementById("result").innerHTML=window.location.protcol;
+                document.getElementById("result").innerHTML=window.location.pathname;
+                
+            }
+            function bomFun2()
+            {
+                //mywin.close();
+                window.location.assign("https://www.w3schools.com/")
+            }
+        </script>
+    </body>
+</html>
