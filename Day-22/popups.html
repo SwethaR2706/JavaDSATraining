@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js</title>
+    </head>
+    <body>
+        <h1>Welcome to ....</h1>
+        <button onclick="bomFun()">Click</button>
+        <!-- for history.html -->
+        <button onclick="bomFun2()">&lt; Back</button>
+         <p id="result"></p>
+        <script>
+            var mywin;
+            function bomFun()
+            {
+                //alert("hello");
+                //confirm("hello");
+                var name=prompt("Enter your name");
+                document.getElementById("result").innerHTML=name;
+            }
+            //for history.html
+            function bomFun2()
+            {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>
