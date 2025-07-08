@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even Odd form</title>
+    </head>
+    <body>
+        <form>
+            Enter any number: <input type="text" id="number" name="number"><br>
+        <p id="result">(even/odd)</p>
+        <input type="submit" value="result" onclick="checkEvenOdd(event)">
+        </form>
+        <script>
+            function checkEvenOdd(event) {
+            event.preventDefault();
+            var x = Number(document.getElementById("number").value);
+            if (x % 2 == 0) {
+                document.getElementById("result").innerText = "Even";
+            } else {
+                document.getElementById("result").innerText = "Odd";
+            }
+        }
+        </script>
+    </body>
+</html>
