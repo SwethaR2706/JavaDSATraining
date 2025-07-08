@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;   
+            align-items: center;       
+            height: 100vh;             
+            margin: 0;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 30px;
+            color: blue;
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction:row;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 6px;
+            border: 1px solid blue;
+            border-radius: 4px;
+        }
+
+        span {
+            font-size: 12px;
+            color: red;
+            margin-top: 3px;
+        }
+
+        #submit {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            color: blue;
+            border: 1px solid blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return valid()">
+        <div class="form-group">
+            <label for="uname">User Name:</label>
+            <input type="text" name="uname" id="uname">
+            <span id="userError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Id:</label>
+            <input type="email" name="email" id="email">
+            <span id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneno">Phone:</label>
+            <input type="tel" name="phoneno" id="phoneno">
+            <span id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" name="pwd" id="pwd">
+            <span id="passError"></span>
+        </div>
+
+        <input type="submit" value="SignUp" id="submit">
+    </form>
+
+    <script>
+        function valid() {
+            var uname = document.getElementById("uname").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phoneno = document.getElementById("phoneno").value.trim();
+            var pwd = document.getElementById("pwd").value.trim();
+
+            document.getElementById("userError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+
+            var userPattern = /^[A-Za-z]{6,15}$/;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            var phonePattern = /^[0-9]{10}$/;
+            var passPattern = /^.{6,15}$/;
+
+            var isValid = true;
+
+            if (!userPattern.test(uname)) {
+                document.getElementById("userError").innerHTML = "Username must be 6–15 letters only.";
+                isValid = false;
+            }
+
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML = "Invalid email format.";
+                isValid = false;
+            }
+
+            if (!phonePattern.test(phoneno)) {
+                document.getElementById("phoneError").innerHTML = "Phone must be 10 digits.";
+                isValid = false;
+            }
+
+            if (!passPattern.test(pwd)) {
+                document.getElementById("passError").innerHTML = "Password must be 6–15 characters.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
