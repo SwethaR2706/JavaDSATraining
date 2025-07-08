@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Font Size Changer</title>
+  <style>
+    body {
+      border: 2px solid black;
+      width: 400px;
+      padding: 20px;
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    label {
+      margin: 0 20px;
+      font-size: 18px;
+    }
+
+    input[type="radio"] {
+      transform: scale(1.5); 
+      margin-right: 5px;
+    }
+
+    p {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="radio" name="size" id="small" onclick="changeSize('small')" checked>
+    <label for="small">small</label>
+
+    <input type="radio" name="size" id="medium" onclick="changeSize('medium')">
+    <label for="medium">medium</label>
+
+    <input type="radio" name="size" id="large" onclick="changeSize('large')">
+    <label for="large">large</label>
+
+    <p id="paragraph">here a paragraph</p>
+  </form>
+
+  <script>
+    function changeSize(size) {
+      var para = document.getElementById("paragraph");
+
+      if (size === "small") {
+        para.style.fontSize = "14px";
+      } else if (size === "medium") {
+        para.style.fontSize = "20px";
+      } else if (size === "large") {
+        para.style.fontSize = "28px";
+      }
+    }
+  </script>
+</body>
+</html>
