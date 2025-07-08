@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even Odd form</title>
+    </head>
+    <body>
+        <form>
+            Enter name: <input type="text" id="name" name="name"><br>
+            enter sub1: <input type="text" id="sub1" name="sub1"><br>
+            enter sub2: <input type="text" id="sub2" name="sub2"><br>
+            enter sub3: <input type="text" id="sub3" name="sub3"><br>
+        <input type="submit" value="get result" onclick="checkGrade(event)">
+        </form>
+        <div id="result"></div>
+        <script>
+            function checkGrade(event) {
+                event.preventDefault();
+                var name = document.getElementById("name").value;
+                var sub1 = Number(document.getElementById("sub1").value);
+                var sub2 = Number(document.getElementById("sub1").value);
+                var sub3 = Number(document.getElementById("sub1").value);
+                var total = sub1 + sub2 + sub3;
+                var avg = total / 3;
+                var grade = "";
+
+                if (avg >= 90) {
+                    grade = "A+";
+                } else if (avg >= 75) {
+                    grade = "A";
+                } else if (avg >= 60) {
+                    grade = "B";
+                } else if (avg >= 50) {
+                    grade = "C";
+                } else {
+                    grade = "Fail";
+                }
+
+                document.getElementById("result").innerHTML =
+                    "Name: " + name + "<br>" +
+                    "Total: " + total + "<br>" +
+                    "Average: " + avg.toFixed(2) + "<br>" +
+                    "Grade: " + grade;
+                }
+        </script>
+    </body>
+</html>
